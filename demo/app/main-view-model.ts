@@ -173,4 +173,19 @@ export class HelloWorldModel extends Observable {
     }, 200);
     return trackInterval;
   }
+
+  public openModal() {
+    console.log("open modal tapped - VM");
+
+    let page = topmost().currentPage;
+
+    page.showModal(
+      "video-player-modal",
+      {},
+      function closeCallback() {
+        //console.log('modal closed');
+      },
+      false
+    );
+  }
 }

@@ -12,7 +12,7 @@
         <Label col="3" text="{{ videoDuration }}" class="message" textWrap="true" />
       </GridLayout>
       <GridLayout rows="*" columns="*, *" backgroundColor="#000000">
-        <Video:Video id="nativeVideoPlayer" controls="true" loadingComplete="{{ videoCompleted }}" finished="{{ videoFinished }}" loop="false" autoplay="true" height="280" src="{{ videoSrc }}" row="0" colSpan="2"/>
+        <Video:Video id="nativeVideoPlayer" controls="true" loadingComplete="{{ videoCompleted }}" finished="{{ videoFinished }}" loop="false" autoplay="false" height="280" src="{{ videoSrc }}" row="0" colSpan="2"/>
         <Label text="Label On Top of Video View" row="0" colSpan="2" color="#fff" horizontalAlignment="center"/>
       </GridLayout>
       <StackLayout orientation="horizontal">
@@ -29,6 +29,7 @@
       </StackLayout>
       <Button text="Animate" width="33%" tap="{{ animate }}"/>
       <Button text="Programmatic Video Player" tap="{{ createVideoPlayer }}" />
+      <Button text="Open Modal" tap="{{ openModal }}" />
       <StackLayout id="emptyStack"></StackLayout>
     </StackLayout>
   </ScrollView>
