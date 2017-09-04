@@ -1,13 +1,17 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" showingModally="onShowingModally"  xmlns:Video="nativescript-videoplayer">
-    <GridLayout class="page-wrap" rows="auto, *">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" showingModally="onShowingModally"  xmlns:Video="nativescript-videoplayer" opacity="0.5">
+    <GridLayout class="page-wrap" rows="auto, auto, auto">
 
         <GridLayout row="0" rows="auto" columns="75,*,75" class="action-bar p-10 bg-primary">
             <Button text="Close" tap="tapClose" row="0" col="0" class="action-item text-left" />
             <Label text="Videos" col="1" class="action-bar-title text-center" /> 
         </GridLayout>  
 
-        <StackLayout row="1">
+        <StackLayout row="1" backgroundColor="#000000">
             <Video:Video id="nativeVideoPlayer" controls="true" loop="true" autoplay="false" height="280" src="~/videos/small.mp4" />
+        </StackLayout>
+
+        <StackLayout row="2" backgroundColor="#FF0000">
+            <Video:Video id="nativeVideoPlayer" controls="true" loop="true" autoplay="true" height="280" src="~/videos/small.mp4" />
         </StackLayout>
         
     </GridLayout>
